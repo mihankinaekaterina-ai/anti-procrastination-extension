@@ -9,7 +9,7 @@ const BLOCKED_DOMAINS = [
   "instagram.com",
   "tiktok.com",
   "twitch.tv",
-  "vk.com"
+  "vk.ru"
 ];
 
 const DEFAULT_SETTINGS = {
