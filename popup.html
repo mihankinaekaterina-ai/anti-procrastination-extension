@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таймер прокрастинации</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup">
+    <header class="header">
+      <div class="logo">⏳</div>
+      <div>
+        <h1>Анти-пожиратель времени</h1>
+        <p>Сначала дело — потом отдых</p>
+      </div>
+    </header>
+
+    <section class="status-card">
+      <span class="eyebrow">СОСТОЯНИЕ</span>
+      <strong id="statusText">Загрузка...</strong>
+      <span id="statusHint" class="muted">Проверяем таймер</span>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <strong id="tasksDone">0</strong>
+        <span>заданий выполнено</span>
+      </div>
+      <div class="stat-card">
+        <strong id="minutesEarned">0</strong>
+        <span>минут отдыха получено</span>
+      </div>
+    </section>
+
+    <section class="settings">
+      <h2>Какие задания предлагать?</h2>
+      <label class="option">
+        <input type="checkbox" id="taskRead">
+        <span><b>Прочитать материал</b><small>Например, страницу документации</small></span>
+      </label>
+      <label class="option">
+        <input type="checkbox" id="taskSolve">
+        <span><b>Решить небольшую задачу</b><small>Простой вопрос по программированию</small></span>
+      </label>
+      <label class="option">
+        <input type="checkbox" id="taskCode">
+        <span><b>Написать строку кода</b><small>Короткое задание для начинающих</small></span>
+      </label>
+
+      <label class="duration-label" for="rewardMinutes">Сколько минут отдыха давать?</label>
+      <select id="rewardMinutes">
+        <option value="5">5 минут</option>
+        <option value="10">10 минут</option>
+        <option value="15">15 минут</option>
+        <option value="30">30 минут</option>
+      </select>
+
+      <p id="saveMessage" class="message" aria-live="polite"></p>
+      <button id="saveSettings" class="primary-button">Сохранить настройки</button>
+    </section>
+
+    <footer>
+      Блокируются: YouTube, Instagram, TikTok, Twitch и VK.
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
